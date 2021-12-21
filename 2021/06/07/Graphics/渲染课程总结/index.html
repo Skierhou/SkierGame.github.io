@@ -1,0 +1,275 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>渲染课程总结 | Skier</title><meta name="keywords" content="Graphics"><meta name="author" content="Skier"><meta name="copyright" content="Skier"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="渲染课程总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="渲染课程总结">
+<meta property="og:url" content="https://skierhou.github.io/2021/06/07/Graphics/%E6%B8%B2%E6%9F%93%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:site_name" content="Skier">
+<meta property="og:description" content="渲染课程总结">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://skierhou.github.io/img/1.png">
+<meta property="article:published_time" content="2021-06-07T06:30:01.000Z">
+<meta property="article:modified_time" content="2021-12-21T11:48:30.700Z">
+<meta property="article:author" content="Skier">
+<meta property="article:tag" content="Graphics">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://skierhou.github.io/img/1.png"><link rel="shortcut icon" href="/blog/img/head.jpg"><link rel="canonical" href="https://skierhou.github.io/2021/06/07/Graphics/%E6%B8%B2%E6%9F%93%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/blog/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/blog/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Skier","link":"链接: ","source":"来源: Skier","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: true,
+  postUpdate: '2021-12-21 19:48:30'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/blog/atom.xml" title="Skier" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/blog/img/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/blog/archives/"><div class="headline">文章</div><div class="length-num">26</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/blog/tags/"><div class="headline">标签</div><div class="length-num">21</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/blog/categories/"><div class="headline">分类</div><div class="length-num">18</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/blog/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/blog/archives/"><i class="fa-fw fas fa-archive"></i><span> 時間軸</span></a></div><div class="menus_item"><a class="site-page" href="/blog/tags/"><i class="fa-fw fas fa-tags"></i><span> 標籤</span></a></div><div class="menus_item"><a class="site-page" href="/blog/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清單</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/blog/%E9%9F%B3%E6%A8%82"><i class="fa-fw /music/"></i><span> 0</span></a></li><li><a class="site-page" href="/blog/%E7%85%A7%E7%89%87"><i class="fa-fw /Gallery/"></i><span> 1</span></a></li><li><a class="site-page" href="/blog/%E9%9B%BB%E5%BD%B1"><i class="fa-fw /movies/"></i><span> 2</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/blog/link/"><i class="fa-fw fas fa-link"></i><span> 友鏈</span></a></div><div class="menus_item"><a class="site-page" href="/blog/about/"><i class="fa-fw fas fa-heart"></i><span> 關於</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/blog/img/1.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/blog/">Skier</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/blog/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/blog/archives/"><i class="fa-fw fas fa-archive"></i><span> 時間軸</span></a></div><div class="menus_item"><a class="site-page" href="/blog/tags/"><i class="fa-fw fas fa-tags"></i><span> 標籤</span></a></div><div class="menus_item"><a class="site-page" href="/blog/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清單</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/blog/%E9%9F%B3%E6%A8%82"><i class="fa-fw /music/"></i><span> 0</span></a></li><li><a class="site-page" href="/blog/%E7%85%A7%E7%89%87"><i class="fa-fw /Gallery/"></i><span> 1</span></a></li><li><a class="site-page" href="/blog/%E9%9B%BB%E5%BD%B1"><i class="fa-fw /movies/"></i><span> 2</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/blog/link/"><i class="fa-fw fas fa-link"></i><span> 友鏈</span></a></div><div class="menus_item"><a class="site-page" href="/blog/about/"><i class="fa-fw fas fa-heart"></i><span> 關於</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">渲染课程总结</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-06-07T06:30:01.000Z" title="发表于 2021-06-07 14:30:01">2021-06-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-12-21T11:48:30.700Z" title="更新于 2021-12-21 19:48:30">2021-12-21</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/blog/categories/Graphics/">Graphics</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>8分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="渲染课程总结"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="渲染综述"><a href="#渲染综述" class="headerlink" title="渲染综述"></a>渲染综述</h1><h2 id="色彩空间"><a href="#色彩空间" class="headerlink" title="色彩空间"></a>色彩空间</h2><ul>
+<li>线性空间：物理世界的色彩空间，如果光照强一倍，亮度也会增强一倍</li>
+<li>伽马(Gamma)空间： 显示器用于颜色矫正，通常值为2.2，对颜色进行灰度，亮度矫正<br>打个比方，功率为50%的灰色，人眼实际感知亮度为：0.5的2.2开根 = 0.7297<br>而人眼认为的50%中灰色，实际功率为：0.5的2.2次幂 = 0.2176</li>
+<li>sRGB色彩空间：sRGB对应的是Gamma0.45所在的空间，如储存的照片相当于对图片先进行了Gamma0.45的矫正，在显示器输出时又进行了Gamma2.2矫正<br>通常使用时，基础颜色等都勾选sRGB，如法线/粗糙度/金属度等贴图需要取消勾选sRGB</li>
+</ul>
+<h2 id="渲染技术术语"><a href="#渲染技术术语" class="headerlink" title="渲染技术术语"></a>渲染技术术语</h2><ul>
+<li>坐标系：在渲染过程中需要将坐标点以及向量等在不同坐标空间转换（模型空间，齐次裁剪空间，屏幕空间，相机空间，世界空间，光源空间等）</li>
+<li>顶点，片段，像素：模型上的顶点，片段是光栅化的产物，像素是屏幕空间像素</li>
+<li>深度测试，蒙版测试：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">深度测试：</span><br><span class="line">ZTest 可取值为：Greater , GEqual , Less , LEqual , Equal , NotEqual , Always , Never , Off，默认是 LEqual，ZTest Off 等同于 ZTest Always。</span><br><span class="line">ZWrite 可取值为：On , Off，默认是 On。</span><br><span class="line">蒙版测试：</span><br><span class="line">Stencil</span><br><span class="line">&#123;</span><br><span class="line">    Ref 1           &#x2F;&#x2F;Reference Value</span><br><span class="line">    ReadMask 255    &#x2F;&#x2F;读取的时候将该值 maskValue 与 referenceValue 和 stencilBufferValue 分别进行按位与（&amp;）操作</span><br><span class="line">    WriteMask 255   &#x2F;&#x2F;写入的时候将该值与 referenceValue 和 stencilBufferValue 分别进行按位与（&amp;）操作</span><br><span class="line">    Comp Always     &#x2F;&#x2F;拿当前参考值与像素缓存值比较</span><br><span class="line">    Pass Replace    &#x2F;&#x2F;两个测试都通过了 进行处理</span><br><span class="line">    Fail Keep       &#x2F;&#x2F;两个测试都没通过 进行处理</span><br><span class="line">    ZFail Replace   &#x2F;&#x2F;模板测试通过而深度测试没通过 进行处理</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>Shader：</li>
+</ul>
+<h2 id="渲染管线"><a href="#渲染管线" class="headerlink" title="渲染管线"></a>渲染管线</h2><ul>
+<li>裁剪(Culling)：</li>
+</ul>
+<ol>
+<li>对象级裁剪：类型裁剪，几何体裁剪，遮挡裁剪</li>
+<li>顶点级裁剪：视口裁剪</li>
+<li>像素级裁剪：EarlyZ</li>
+</ol>
+<ul>
+<li>渲染物件：</li>
+</ul>
+<ol>
+<li>渲染状态</li>
+<li>材质，纹理，各种参数</li>
+<li>渲染顺序</li>
+</ol>
+<ul>
+<li>后处理(Post Processing)：对屏幕渲染结果进行加工</li>
+</ul>
+<h2 id="光照框架"><a href="#光照框架" class="headerlink" title="光照框架"></a>光照框架</h2><p>对于N个物体受M盏光的影响<br>框架|算法复杂度|优点|缺点<br>:–|:–|:–|:–<br>forward shading(前向渲染)|O(N*M)|实现简单，兼容性好|性能较低，光源个数限制严格<br>deffered shading(延迟渲染)|O(N+M)|支持多光源，性能较好|<br>forward+ shading(前向+渲染)|||</p>
+<h2 id="硬件"><a href="#硬件" class="headerlink" title="硬件"></a>硬件</h2><ul>
+<li>GPU：寄存器，Cache，显存 （GPU读取顺序：寄存器找不到-&gt;Cache-&gt;显存-&gt;CPU）</li>
+<li>带宽</li>
+</ul>
+<h2 id="图形API"><a href="#图形API" class="headerlink" title="图形API"></a>图形API</h2><ul>
+<li>DirectX，OpenGL，OpenGL ES，WebGL，Vulkan，Metal</li>
+</ul>
+<h2 id="渲染应用方式"><a href="#渲染应用方式" class="headerlink" title="渲染应用方式"></a>渲染应用方式</h2><ul>
+<li>离线渲染：电影，动画，烘培LightMap</li>
+<li>实时渲染：游戏，VR</li>
+</ul>
+<h1 id="基础光照模型"><a href="#基础光照模型" class="headerlink" title="基础光照模型"></a>基础光照模型</h1><ul>
+<li>Lambert：     max(0,dot(L,N))</li>
+<li>HalfLambert： max(0,dot(L,N)) * 0.5 + 0.5</li>
+<li>Phong：       pow(max(0,dot(reflect(-L,N), V)), Gloss)</li>
+<li>BlinnPhong：  pow(max(0,dot(normalize(L+V), N)), Gloss)</li>
+</ul>
+<h1 id="PBR"><a href="#PBR" class="headerlink" title="PBR"></a>PBR</h1><ul>
+<li>满足以下几点的光照模型，符合PBR模型：</li>
+</ul>
+<ol>
+<li>微表面：不同材质的平面，有很多不同朝向不一的微小平面</li>
+<li>能量守恒：出射光的总量不超过入射光的总量</li>
+<li>反射方程：使用基于物理的BRDF(双向反射分布函数)</li>
+</ol>
+<ul>
+<li><p>PBR反射方程：L(o) = f(fr(p,wi,wo) * Li(p,wi) * dot(n,wi) * dwi)</p>
+</li>
+<li><p>brdf方程：</p>
+</li>
+</ul>
+<ol>
+<li>fr(p,wi,wo) = k(d)*f(lambert) + K(s)*f(cook-torrance)</li>
+<li>f(lamber) = c / Π</li>
+<li>∫(cook-torrance) = D<em>F</em>G / (4*dot(wo,n)*dot(wi,n))</li>
+<li>D：法线分布函数（NDF），估算微平面的整体取向，公式：a^2 / (Π * (NdotH^2) * (a^2-1) + 1)^2  （注：a表示粗糙度）</li>
+<li>F: 菲尼尔方程，用于描述表面反射光所占比例， 公式： F0 + (1 - F0) * pos(1 - cosTheta, 5) （注：F0表示不同材质的垂直方向的反射率，直接光照中cosTheta：HdotV或HdotL，间接光照中cosTheta：NdotV）</li>
+<li>G：几何函数，用于计算微表面，自阴影， 公式：NdotV / (NdotV(1.0 - k) + k)  （注：k由粗糙度a计算，直接光照：k=(a+1)^2 / 8， 间接光照：k=a^2 / 2）</li>
+<li>K(d)：(1-F)*(1-metallic)</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;计算直接光照</span><br><span class="line">half3 CalcDirectLight(half metalness, half roughness, half3 albedo, half3 F0, half3 normal, half3 viewDir, half NoV, float3 worldPos)</span><br><span class="line">&#123;</span><br><span class="line">    &#x2F;&#x2F;准备参数</span><br><span class="line">    half3 lightDir &#x3D; normalize(_WorldSpaceLightPos0.xyz - worldPos * _WorldSpaceLightPos0.w); &#x2F;&#x2F;获取光线方向</span><br><span class="line">    half3 halfDir &#x3D; normalize(viewDir + lightDir); &#x2F;&#x2F;计算半角方向</span><br><span class="line">    half NoL &#x3D; saturate(dot(normal, lightDir)); &#x2F;&#x2F;计算法线光线点积</span><br><span class="line">    half NoH &#x3D; saturate(dot(normal, halfDir)); &#x2F;&#x2F;计算法线半角点积</span><br><span class="line">    half HoL &#x3D; saturate(dot(halfDir, lightDir)); &#x2F;&#x2F;计算半角光线点积，同半角视线点积</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;计算方程参数</span><br><span class="line">    half3 F &#x3D; FresnelSchlick(HoL, F0); &#x2F;&#x2F;计算菲涅尔</span><br><span class="line">    half G &#x3D; GeometrySmith(NoV, NoL, pow(roughness + 1.0, 2) &#x2F; 8.0); &#x2F;&#x2F;计算遮挡</span><br><span class="line">    half D &#x3D; DistributionGGX(NoH, roughness * roughness); &#x2F;&#x2F;计算分布</span><br><span class="line">    half3 kD &#x3D; (1.0 - F) * (1.0 - metalness); &#x2F;&#x2F;计算漫反射系数</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;计算直接光照结果</span><br><span class="line">    half3 directDiffuse &#x3D; kD * albedo &#x2F; BRDF_PI; &#x2F;&#x2F;计算漫反射</span><br><span class="line">    half3 directSpecular &#x3D; F * (D * G) &#x2F; (4.0 * max(NoV * NoL, EPSILSON)); &#x2F;&#x2F;计算高光</span><br><span class="line">    half3 directLightIn &#x3D; _LightColor0.rgb * BRDF_PI; &#x2F;&#x2F;获取直接光照颜色</span><br><span class="line">    return (directDiffuse + directSpecular) * NoL * directLightIn;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;菲涅尔函数</span><br><span class="line">half3 FresnelSchlick(half NoV, half3 F0)</span><br><span class="line">&#123;</span><br><span class="line">    return F0 + (1.0 - F0) * pow(1.0 - NoV, 5);</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;几何函数</span><br><span class="line">half GeometrySchlickGGX(half NoV, half k)</span><br><span class="line">&#123;</span><br><span class="line">	return NoV &#x2F; max(NoV * (1.0 - k) + k, EPSILSON);</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;几何函数</span><br><span class="line">half GeometrySmith(half NoV, half NoL, half k)</span><br><span class="line">&#123;</span><br><span class="line">	return GeometrySchlickGGX(NoV, k) * GeometrySchlickGGX(NoL, k);</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;分布函数 alpha&#x3D;roughness*roughness</span><br><span class="line">half DistributionGGX(half NoH, half alpha)</span><br><span class="line">&#123;</span><br><span class="line">    half a2 &#x3D; alpha * alpha;</span><br><span class="line">    half denom &#x3D; pow2(NoH * NoH * (a2 - 1.0) + 1.0);</span><br><span class="line">	return a2 &#x2F; max(denom * BRDF_PI, EPSILSON);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>IBL间接光照</li>
+</ul>
+<ol>
+<li>CubeMap IrradianceMap 或者ShadeSH9() 计算间接光照的diffuse</li>
+<li>预高光积分图，或者高光积分算法计算间接光照的specular</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;计算间接光照</span><br><span class="line">half3 CalcIndirectLight(half metalness, half roughness, half3 albedo, half3 F0, half3 normal, half3 viewDir, half NoV)</span><br><span class="line">&#123;</span><br><span class="line">    &#x2F;&#x2F;准备参数</span><br><span class="line">    half3 F &#x3D; FresnelSchlick(NoV, F0); &#x2F;&#x2F;计算菲涅尔</span><br><span class="line">    half3 kD &#x3D; (1.0 - F) * (1.0 - metalness); &#x2F;&#x2F;计算漫反射系数</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;计算间接漫反射</span><br><span class="line">    &#x2F;&#x2F;half3 indirectDiffuse &#x3D; texCUBE(_IrradianceCube, normal).rgb;</span><br><span class="line">    half3 indirectDiffuse &#x3D; ShadeSH9(half4(normal, 1.0));</span><br><span class="line">    indirectDiffuse *&#x3D; kD * albedo;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;计算间接高光</span><br><span class="line">    half mip &#x3D; GetMipLevelFromRoughness(roughness); &#x2F;&#x2F;计算粗糙度对应MIP</span><br><span class="line">    half3 reflDir &#x3D; reflect(-viewDir, normal); &#x2F;&#x2F;计算视线反射方向</span><br><span class="line">    &#x2F;&#x2F;half3 indirectSpecular &#x3D; texCUBElod(_RadianceCube, half4(reflDir, mip)).rgb;</span><br><span class="line">    half4 rgbm &#x3D; UNITY_SAMPLE_TEXCUBE_LOD(unity_SpecCube0, reflDir, mip);</span><br><span class="line">    half3 indirectSpecular &#x3D; DecodeHDR(rgbm, unity_SpecCube0_HDR);</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;高光积分</span><br><span class="line">#if USE_BRDF_INTEGRATION_MAP</span><br><span class="line">    half2 envBRDF &#x3D; tex2D(_BRDFIntegrationMap, half2(NoV, roughness)).rg;</span><br><span class="line">#else</span><br><span class="line">    half2 envBRDF &#x3D; IntegrateSpecularBRDF(NoV, roughness);</span><br><span class="line">#endif</span><br><span class="line">    indirectSpecular *&#x3D; F * envBRDF.x + envBRDF.y;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;计算间接光照结果</span><br><span class="line">    return (indirectDiffuse + indirectSpecular) * _IndirectIntensity;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">half2 IntegrateSpecularBRDF(half NoV, half roughness)</span><br><span class="line">&#123;</span><br><span class="line">	const half4 c0 &#x3D; half4(-1, -0.0275, -0.572, 0.022);</span><br><span class="line">	const half4 c1 &#x3D; half4(1, 0.0425, 1.04, -0.04);</span><br><span class="line">	half4 r &#x3D; roughness * c0 + c1;</span><br><span class="line">	half a004 &#x3D; min(r.x * r.x, exp2(-9.28 * NoV)) * r.x + r.y;</span><br><span class="line">	return half2(-c1.z, c1.z) * a004 + r.zw;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>PBR两种工作流</li>
+</ul>
+<ol>
+<li>metaillic/roughness工作流（金属/粗糙度）</li>
+<li>specular/glossness工作流（高光/光泽度）<br>区别：</li>
+</ol>
+<h1 id="渲染管线-1"><a href="#渲染管线-1" class="headerlink" title="渲染管线"></a>渲染管线</h1><h2 id="Bulid-in"><a href="#Bulid-in" class="headerlink" title="Bulid-in"></a>Bulid-in</h2><p>内置管线，不可自定义</p>
+<h2 id="SRP"><a href="#SRP" class="headerlink" title="SRP"></a>SRP</h2><p>可编程的渲染管线</p>
+<h2 id="URP"><a href="#URP" class="headerlink" title="URP"></a>URP</h2><p>通用渲染管线：Unity 2019.2.0版本后支持Universal Render Pipeline</p>
+<h2 id="HDRP"><a href="#HDRP" class="headerlink" title="HDRP"></a>HDRP</h2><p>高清渲染管线</p>
+<h2 id="LWRP"><a href="#LWRP" class="headerlink" title="LWRP"></a>LWRP</h2><p>URP的前身</p>
+<h1 id="后处理"><a href="#后处理" class="headerlink" title="后处理"></a>后处理</h1><ul>
+<li>LUT（ColorGrading） 颜色分级(调整暖色/饱和度这种)</li>
+<li>Bloom 全屏泛光</li>
+<li>GaussianBlur 高斯模糊</li>
+<li>DepthOfField 景深模糊</li>
+<li>RadialBlur 径向模糊</li>
+</ul>
+<h2 id="Post-ProcessStack"><a href="#Post-ProcessStack" class="headerlink" title="Post-ProcessStack"></a>Post-ProcessStack</h2><h1 id="角色渲染"><a href="#角色渲染" class="headerlink" title="角色渲染"></a>角色渲染</h1><h2 id="头发"><a href="#头发" class="headerlink" title="头发"></a>头发</h2><ul>
+<li>各项异性光照</li>
+<li>Kajiya-Kay光照模型：使用切线/副切线计算高光，高光计算两层，往法线方向偏移。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 计算高光值</span><br><span class="line">float StrandSpecular (float3 T, float3 V, float3 L, float p)</span><br><span class="line">&#123;</span><br><span class="line">    float3 H &#x3D; normalize(L + V);</span><br><span class="line">    float dotTH &#x3D; dot(T, H);</span><br><span class="line">    float sinTH &#x3D; sqrt(1.0 - dotTH*dotTH);</span><br><span class="line">    float dirAtten &#x3D; smoothstep(-1.0, 0.0, dotTH);</span><br><span class="line">    return dirAtten * pow(sinTH, p);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 计算偏移值 传入StrandSpecular中的T</span><br><span class="line">float3 ShiftTangent(float3 T,float3 N,float shift)</span><br><span class="line">&#123; </span><br><span class="line">    return normalize(T + shift * N); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="皮肤"><a href="#皮肤" class="headerlink" title="皮肤"></a>皮肤</h2><ul>
+<li>次表面散射(SSS)</li>
+</ul>
+<h1 id="阴影渲染"><a href="#阴影渲染" class="headerlink" title="阴影渲染"></a>阴影渲染</h1><ul>
+<li><p>标准阴影算法步骤：<br>(1) 以光源空间绘制：生成深度图<br>(2) 以相机空间绘制：将顶点坐标转换值光源空间的顶点z值得到d值<br>(3) 以顶点再光源空间的xy值为uv采样ShadowMap，获取阴影z值<br>(4) d &gt;= z 阴影内， d &lt; z阴影外</p>
+</li>
+<li><p>软阴影：通常使用PCF，PCSS</p>
+</li>
+<li><p>PCF：从目标点周围多个点做偏移采样，取平均阴影值</p>
+</li>
+<li><p>PCSS：</p>
+</li>
+<li><p>阴影失真：Shadow Acne，Peter Panning</p>
+</li>
+<li><p>级联阴影 Cascade Shadowmap：</p>
+</li>
+<li><p>ScreenSpaceShadow：</p>
+</li>
+<li><p>ShadowVolume：</p>
+</li>
+</ul>
+<h1 id="GI"><a href="#GI" class="headerlink" title="GI"></a>GI</h1><ul>
+<li>Ray Tracing</li>
+<li>Path Tracing</li>
+</ul>
+<h1 id="Shader调试工具"><a href="#Shader调试工具" class="headerlink" title="Shader调试工具"></a>Shader调试工具</h1><h2 id="Frame-Debuger"><a href="#Frame-Debuger" class="headerlink" title="Frame Debuger"></a>Frame Debuger</h2><h2 id="Renderdoc"><a href="#Renderdoc" class="headerlink" title="Renderdoc"></a>Renderdoc</h2><h2 id="XCode"><a href="#XCode" class="headerlink" title="XCode"></a>XCode</h2><h1 id="环境效果"><a href="#环境效果" class="headerlink" title="环境效果"></a>环境效果</h1><h1 id="动画与特效"><a href="#动画与特效" class="headerlink" title="动画与特效"></a>动画与特效</h1><h1 id="NPR-Non-Photorealistic-Rendering-非真实渲染"><a href="#NPR-Non-Photorealistic-Rendering-非真实渲染" class="headerlink" title="NPR(Non Photorealistic Rendering) 非真实渲染"></a>NPR(Non Photorealistic Rendering) 非真实渲染</h1></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Skier</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://skierhou.github.io/2021/06/07/Graphics/%E6%B8%B2%E6%9F%93%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/">https://skierhou.github.io/2021/06/07/Graphics/%E6%B8%B2%E6%9F%93%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://SkierHou.github.io" target="_blank">Skier</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/blog/tags/Graphics/">Graphics</a></div><div class="post_share"><div class="social-share" data-image="/blog/img/1.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/blog/2021/08/23/Graphics/Unity%E5%A4%A7%E4%B8%96%E7%95%8C%E6%A8%A1%E5%9D%97%E8%AE%B0%E5%BD%95/"><img class="prev-cover" src="/blog/img/1.png" onerror="onerror=null;src='/blog/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Unity大世界模块记录</div></div></a></div><div class="next-post pull-right"><a href="/blog/2021/04/20/Service/ZeroMQ%E4%BD%BF%E7%94%A8/"><img class="next-cover" src="/blog/img/1.png" onerror="onerror=null;src='/blog/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">ZeroMQ使用</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/blog/2021/03/12/Graphics/3D Math Primer for Graphics and Game 2nd/" title="3D数学基础：图形与游戏开发"><img class="cover" src="/blog/img/1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-03-12</div><div class="title">3D数学基础：图形与游戏开发</div></div></a></div><div><a href="/blog/2021/03/31/Graphics/OpenGL/" title="OpenGL学习"><img class="cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-03-31</div><div class="title">OpenGL学习</div></div></a></div><div><a href="/blog/2021/03/31/Graphics/UnityShader/" title="UnityShader基础渲染知识点概况"><img class="cover" src="/blog/img/1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-03-31</div><div class="title">UnityShader基础渲染知识点概况</div></div></a></div><div><a href="/blog/2021/03/31/Graphics/Games101作业/" title="Games101作业"><img class="cover" src="/blog/img/1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-03-31</div><div class="title">Games101作业</div></div></a></div><div><a href="/blog/2021/03/31/Graphics/Games101学习笔记/" title="Games101学习笔记"><img class="cover" src="/blog/img/1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-03-31</div><div class="title">Games101学习笔记</div></div></a></div><div><a href="/blog/2021/08/23/Graphics/Unity大世界模块记录/" title="Unity大世界模块记录"><img class="cover" src="/blog/img/1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-08-23</div><div class="title">Unity大世界模块记录</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/blog/img/head.jpg" onerror="this.onerror=null;this.src='/blog/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Skier</div><div class="author-info__description">游戏开发</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/blog/archives/"><div class="headline">文章</div><div class="length-num">26</div></a></div><div class="card-info-data-item is-center"><a href="/blog/tags/"><div class="headline">标签</div><div class="length-num">21</div></a></div><div class="card-info-data-item is-center"><a href="/blog/categories/"><div class="headline">分类</div><div class="length-num">18</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/SkierHou"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/SkierHou" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:675363508@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B8%B2%E6%9F%93%E7%BB%BC%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">渲染综述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%89%B2%E5%BD%A9%E7%A9%BA%E9%97%B4"><span class="toc-number">1.1.</span> <span class="toc-text">色彩空间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B8%B2%E6%9F%93%E6%8A%80%E6%9C%AF%E6%9C%AF%E8%AF%AD"><span class="toc-number">1.2.</span> <span class="toc-text">渲染技术术语</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B8%B2%E6%9F%93%E7%AE%A1%E7%BA%BF"><span class="toc-number">1.3.</span> <span class="toc-text">渲染管线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%89%E7%85%A7%E6%A1%86%E6%9E%B6"><span class="toc-number">1.4.</span> <span class="toc-text">光照框架</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A1%AC%E4%BB%B6"><span class="toc-number">1.5.</span> <span class="toc-text">硬件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E5%BD%A2API"><span class="toc-number">1.6.</span> <span class="toc-text">图形API</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B8%B2%E6%9F%93%E5%BA%94%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="toc-number">1.7.</span> <span class="toc-text">渲染应用方式</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B"><span class="toc-number">2.</span> <span class="toc-text">基础光照模型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#PBR"><span class="toc-number">3.</span> <span class="toc-text">PBR</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B8%B2%E6%9F%93%E7%AE%A1%E7%BA%BF-1"><span class="toc-number">4.</span> <span class="toc-text">渲染管线</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Bulid-in"><span class="toc-number">4.1.</span> <span class="toc-text">Bulid-in</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SRP"><span class="toc-number">4.2.</span> <span class="toc-text">SRP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#URP"><span class="toc-number">4.3.</span> <span class="toc-text">URP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HDRP"><span class="toc-number">4.4.</span> <span class="toc-text">HDRP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LWRP"><span class="toc-number">4.5.</span> <span class="toc-text">LWRP</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%8E%E5%A4%84%E7%90%86"><span class="toc-number">5.</span> <span class="toc-text">后处理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Post-ProcessStack"><span class="toc-number">5.1.</span> <span class="toc-text">Post-ProcessStack</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A7%92%E8%89%B2%E6%B8%B2%E6%9F%93"><span class="toc-number">6.</span> <span class="toc-text">角色渲染</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%B4%E5%8F%91"><span class="toc-number">6.1.</span> <span class="toc-text">头发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9A%AE%E8%82%A4"><span class="toc-number">6.2.</span> <span class="toc-text">皮肤</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%98%B4%E5%BD%B1%E6%B8%B2%E6%9F%93"><span class="toc-number">7.</span> <span class="toc-text">阴影渲染</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#GI"><span class="toc-number">8.</span> <span class="toc-text">GI</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Shader%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7"><span class="toc-number">9.</span> <span class="toc-text">Shader调试工具</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Frame-Debuger"><span class="toc-number">9.1.</span> <span class="toc-text">Frame Debuger</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Renderdoc"><span class="toc-number">9.2.</span> <span class="toc-text">Renderdoc</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#XCode"><span class="toc-number">9.3.</span> <span class="toc-text">XCode</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E6%95%88%E6%9E%9C"><span class="toc-number">10.</span> <span class="toc-text">环境效果</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8A%A8%E7%94%BB%E4%B8%8E%E7%89%B9%E6%95%88"><span class="toc-number">11.</span> <span class="toc-text">动画与特效</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#NPR-Non-Photorealistic-Rendering-%E9%9D%9E%E7%9C%9F%E5%AE%9E%E6%B8%B2%E6%9F%93"><span class="toc-number">12.</span> <span class="toc-text">NPR(Non Photorealistic Rendering) 非真实渲染</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/blog/2021/12/20/Unity/%E4%B8%80%E4%BA%9B%E8%AE%B0%E5%BD%95/" title="Unity 开发一些记录"><img src="/blog/img/1.png" onerror="this.onerror=null;this.src='/blog/img/404.jpg'" alt="Unity 开发一些记录"/></a><div class="content"><a class="title" href="/blog/2021/12/20/Unity/%E4%B8%80%E4%BA%9B%E8%AE%B0%E5%BD%95/" title="Unity 开发一些记录">Unity 开发一些记录</a><time datetime="2021-12-20T06:30:01.000Z" title="发表于 2021-12-20 14:30:01">2021-12-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/blog/2021/12/01/CSharp/Task/" title="C# Task用法记录"><img src="/blog/img/1.png" onerror="this.onerror=null;this.src='/blog/img/404.jpg'" alt="C# Task用法记录"/></a><div class="content"><a class="title" href="/blog/2021/12/01/CSharp/Task/" title="C# Task用法记录">C# Task用法记录</a><time datetime="2021-12-01T06:30:01.000Z" title="发表于 2021-12-01 14:30:01">2021-12-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/blog/2021/12/01/CSharp/Thread/" title="C# Thread记录"><img src="/blog/img/1.png" onerror="this.onerror=null;this.src='/blog/img/404.jpg'" alt="C# Thread记录"/></a><div class="content"><a class="title" href="/blog/2021/12/01/CSharp/Thread/" title="C# Thread记录">C# Thread记录</a><time datetime="2021-12-01T06:30:01.000Z" title="发表于 2021-12-01 14:30:01">2021-12-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/blog/2021/11/30/Graphics/URP/URP%E6%95%88%E6%9E%9C%E5%AE%9E%E7%8E%B0/" title="URP效果实现,从基础慢慢深入"><img src="/blog/img/1.png" onerror="this.onerror=null;this.src='/blog/img/404.jpg'" alt="URP效果实现,从基础慢慢深入"/></a><div class="content"><a class="title" href="/blog/2021/11/30/Graphics/URP/URP%E6%95%88%E6%9E%9C%E5%AE%9E%E7%8E%B0/" title="URP效果实现,从基础慢慢深入">URP效果实现,从基础慢慢深入</a><time datetime="2021-11-30T06:30:01.000Z" title="发表于 2021-11-30 14:30:01">2021-11-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/blog/2021/11/21/Graphics/URP/URP%E5%AD%A6%E4%B9%A0%E6%B1%87%E6%80%BB/" title="URP学习汇总"><img src="/blog/img/1.png" onerror="this.onerror=null;this.src='/blog/img/404.jpg'" alt="URP学习汇总"/></a><div class="content"><a class="title" href="/blog/2021/11/21/Graphics/URP/URP%E5%AD%A6%E4%B9%A0%E6%B1%87%E6%80%BB/" title="URP学习汇总">URP学习汇总</a><time datetime="2021-11-21T06:30:01.000Z" title="发表于 2021-11-21 14:30:01">2021-11-21</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Skier</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/blog/js/utils.js"></script><script src="/blog/js/main.js"></script><div class="js-pjax"></div><script defer data-pjax src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/blog/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
